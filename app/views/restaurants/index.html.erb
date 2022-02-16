@@ -1,0 +1,10 @@
+<div class="container">
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+      <li><%= restaurant.name %> - <%= link_to 'Show', restaurant_path(restaurant) %> - <%= link_to 'Edit', edit_restaurant_path(restaurant) %> - <%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+
+      <% end %>
+  </ul>
+</div>
+
+<%= link_to 'New Restaurant', new_restaurant_path %>
